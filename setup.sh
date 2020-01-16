@@ -23,7 +23,7 @@ if [ ! -d ~/.vim/bundle/vim-fugitive ]; then
   git clone https://github.com/tpope/vim-fugitive
 fi
 
-if [ ! -f ~/.vim/bundle/ctrlp.vim ]; then
+if [ ! -d ~/.vim/bundle/ctrlp.vim ]; then
   echo $'\nInstalling ctrlp plugin'
   cd ~/.vim
   git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
