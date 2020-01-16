@@ -23,8 +23,14 @@ if [ ! -d ~/.vim/bundle/vim-fugitive ]; then
   git clone https://github.com/tpope/vim-fugitive
 fi
 
+if [ ! -f ~/.vim/bundle/ctrlp.vim ]; then
+  echo $'\nInstalling ctrlp plugin'
+  cd ~/.vim
+  git clone https://github.com/ctrlpvim/ctrlp.vim.git bundle/ctrlp.vim
+fi
+
 if [ -f ~/.vimrc ]; then
-echo $'\nBackup .vimrc to .vimrc_copy'
+  echo $'\nBackup .vimrc to .vimrc_copy'
   cp ~/.vimrc ~/.vimrc_copy
 fi
 
@@ -37,5 +43,10 @@ syntax on
 set number
 let g:airline_powerline_fonts = 1
 execute pathogen#infect()
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 EOF
