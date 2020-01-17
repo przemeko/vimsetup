@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ ! -f ~/.vim/autoload/pathogen.vim ]; then
-echo $'\nInstalling pathogen'
-   mkdir -p ~/.vim/autoload ~/.vim/bundle
-   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  echo $'\nInstalling pathogen'
+  mkdir -p ~/.vim/autoload ~/.vim/bundle
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
 if [ ! -d ~/.vim/pack/themes/opt/solarized8 ]; then
@@ -48,5 +48,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 EOF
