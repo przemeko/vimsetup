@@ -42,6 +42,7 @@ colorscheme solarized8_high
 syntax on
 set number
 set ignorecase
+set hlsearch
 let g:airline_powerline_fonts = 1
 execute pathogen#infect()
 
