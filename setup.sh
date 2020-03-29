@@ -41,6 +41,7 @@ set background=dark
 colorscheme solarized8_high
 syntax on
 set number
+set ignorecase
 let g:airline_powerline_fonts = 1
 execute pathogen#infect()
 
